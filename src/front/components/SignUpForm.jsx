@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-const LoginForm = ({ onLogin }) => {
+const SignUpForm = ({ onLogin }) => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -22,7 +22,7 @@ const LoginForm = ({ onLogin }) => {
     return (
         <div className="container d-flex justify-content-center align-items-center vh-50">
             <div className="card p-4 shadow" style={{ width: "22rem" }}>
-                <h3 className="text-center mb-4">Login</h3>
+                <h3 className="text-center mb-4">Sign Up</h3>
 
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3">
@@ -50,7 +50,7 @@ const LoginForm = ({ onLogin }) => {
                     </div>
 
                     <button type="submit" className="btn btn-primary w-100">
-                        Login
+                        Sign Up
                     </button>
                 </form>
             </div>
@@ -58,4 +58,4 @@ const LoginForm = ({ onLogin }) => {
     )
 }
 
-export default LoginForm
+export default SignUpForm
