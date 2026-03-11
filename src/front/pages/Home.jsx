@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import rigoImageUrl from "../assets/img/rigo-baby.jpg";
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
-import LoginForm from "../components/LoginForm.jsx";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
 
@@ -35,15 +35,15 @@ export const Home = () => {
 
 	return (
 		<div className="text-center mt-5">
-			<LoginForm />
-			<div className="alert alert-info">
-				{store.message ? (
-					<span>{store.message}</span>
-				) : (
-					<span className="text-danger">
-						Loading message from the backend (make sure your python 🐍 backend is running)...
-					</span>
-				)}
+			<h1>Esta es una pagina sobre secretos. Para verlos, debe ingresar.</h1>
+			<h1>Si no tiene cuenta, debe crearse una</h1>
+			<div className="d-flex justify-content-center gap-2">
+				<Link to="/login">
+					<button className="btn btn-primary">Login</button>
+				</Link>
+				<Link to="/signup">
+					<button className="btn btn-primary">Sign Up</button>
+				</Link>
 			</div>
 		</div>
 	);
